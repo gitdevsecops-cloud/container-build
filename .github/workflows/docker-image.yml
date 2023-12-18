@@ -21,6 +21,6 @@ jobs:
     - name: Run Trivy
       uses: aquasecurity/trivy-action@master
       with:
-        image-ref: container-test:${date +%s}
+        image-ref: container-test:$(date +%s)
         format: 'table'
         
