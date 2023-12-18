@@ -21,6 +21,6 @@ jobs:
     - name: Run Trivy
       run: |
          docker pull aquasec/trivy:latest
-         docker run --rm -v $(pwd):/workdir -w /workdir aquasec/trivy:latest container-test:$(date +%s)
+         docker run --rm -v $(pwd):/workdir -w /workdir aquasec/trivy:latest image container-test:$(date +%s)
       if: success()
          
